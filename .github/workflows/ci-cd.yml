@@ -43,10 +43,11 @@ jobs:
       with:
         version: v1.27.3
 
-    - name: Configure kubeconfig
-      run: |
-        mkdir -p $HOME/.kube
-        echo "${{ secrets.KUBE_CONFIG_DATA }}" | base64 --decode > $HOME/.kube/config
+- name: Configure kubeconfig
+  run: |
+    mkdir -p $HOME/.kube
+    echo "${{ secrets.KUBE_CONFIG_DATA }}" | base64 --decode > $HOME/.kube/config
+
 
     - name: Apply Kubernetes Manifests
       run: |
