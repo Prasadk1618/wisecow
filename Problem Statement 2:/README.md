@@ -1,7 +1,7 @@
-# Automated Local Backup Script
-
-This is a simple **Bash script** to automate the backup of a specified directory on a single server.  
-The script copies files from a **source directory** to a **backup directory** with a timestamp, maintains logs, and automatically deletes backups older than a configured number of days. It also allows easy automation via cron.
+2. Automated Backup Solution:  
+Write a script to automate the backup of a specified directory to a remote 
+server or a cloud storage solution. The script should provide a report on the 
+success or failure of the backup operation.  
 
 ---
 
