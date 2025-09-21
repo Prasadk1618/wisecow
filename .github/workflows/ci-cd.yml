@@ -19,14 +19,3 @@ jobs:
         run: |
           echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
           docker push devopsbabu16/wisecow:latest
-
-      - name: Deploy to Kubernetes
-        uses: azure/k8s-deploy@v4
-        with:
-          manifests: |
-            k8s/deployment.yml
-            k8s/service.yml
-          images: |
-            devopsbabu16/wisecow:latest
-          namespace: default
-          kubectl-version: 'latest'
